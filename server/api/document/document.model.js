@@ -13,6 +13,7 @@ var DocumentChunk = new Schema({
 
 var DocumentSchema = new Schema({
   title:    String,
+  date:     { type: Date },
   created:  { type: Date, default: Date.now, required: true },
   creator:  { type: Schema.Types.ObjectId, ref: 'User' },
   editors:  { type: [{type: Schema.Types.ObjectId, ref: 'User'}], default: [] },
